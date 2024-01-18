@@ -18,6 +18,8 @@
 		AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B222B59BBD000FFAF5C /* RegisterViewController.swift */; };
 		AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B242B59BBF100FFAF5C /* SignInViewController.swift */; };
 		AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */; };
+		AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */; };
+		AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AEF35B222B59BBD000FFAF5C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEF35B242B59BBF100FFAF5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				AEF35B0D2B59B75D00FFAF5C /* Assets.xcassets */,
 				AEF35B182B59B80F00FFAF5C /* AppConstants */,
 				AEF35B1D2B59B86900FFAF5C /* AppDelegates */,
+				AEF35B2A2B59C41500FFAF5C /* CommonUtility */,
 				AEF35B1B2B59B82500FFAF5C /* Controllers */,
 				AEF35B1A2B59B82000FFAF5C /* Model */,
 				AEF35B1C2B59B84C00FFAF5C /* View */,
@@ -90,6 +95,7 @@
 		AEF35B192B59B81A00FFAF5C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +134,14 @@
 				AEF35B062B59B75C00FFAF5C /* SceneDelegate.swift */,
 			);
 			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		AEF35B2A2B59C41500FFAF5C /* CommonUtility */ = {
+			isa = PBXGroup;
+			children = (
+				AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */,
+			);
+			path = CommonUtility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +219,11 @@
 				AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */,
 				AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */,
 				AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */,
+				AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */,
 				AEF35B1F2B59BA6C00FFAF5C /* SegueConstants.swift in Sources */,
 				AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */,
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,
+				AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */,
 				AEF35B072B59B75C00FFAF5C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

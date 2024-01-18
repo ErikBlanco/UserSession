@@ -12,6 +12,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    lazy var registerViewModel: RegisterViewModel = {
+        let viewModel = RegisterViewModel()
+        viewModel.registerDelegate = self
+        return viewModel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +25,16 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerTapped(_ sender: UIButton) {
         performSegue(withIdentifier: SegueConstants.signInId, sender: self)
+    }
+}
+
+extension RegisterViewController: RegisterViewModelDelegate {
+    func validationResult(result: String) {
+        
+    }
+    
+    func temp() {
+        
     }
 }
 
