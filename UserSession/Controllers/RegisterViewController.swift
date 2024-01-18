@@ -35,7 +35,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func textFieldChanged(_ sender: UITextField) {
-                sender.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        sender.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     
@@ -48,7 +48,6 @@ class RegisterViewController: UIViewController {
 //MARK: - Register ViewModel Delegate
 extension RegisterViewController: RegisterViewModelDelegate {
     func validationResult(result: Bool) {
-        print("RegisterViewController - ValidationResult: \(result)")
         registerBtn.isEnabled = result
     }
 }
@@ -58,6 +57,5 @@ extension RegisterViewController: UITextFieldDelegate {
     @objc func textFieldDidChange(_ textField: UITextField) {
         registerViewModel.registerRequest = RegisterRequest(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
     }
-    
 }
 

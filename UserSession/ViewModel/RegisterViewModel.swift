@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegisterViewModelDelegate: BaseProtocols {
-//    func temp()
+
 }
 
 class RegisterViewModel: ObservableObject {
