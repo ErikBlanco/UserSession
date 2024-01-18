@@ -12,12 +12,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
+    @IBOutlet weak var registerBtn: UIButton!
     //MARK: - Properties
     private let registerService: RegisterServiceImplementation = RegisterServiceImplementation(_httpUtility: HttpUtility())
     
     lazy var registerViewModel: RegisterViewModel = {
-        let viewModel = RegisterViewModel()
+        let viewModel = RegisterViewModel(_registerService: registerService)
         viewModel.registerDelegate = self
         return viewModel
     }()
@@ -26,7 +26,18 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        screenInitialSetup()
     }
+    
+    //MARK: - Screen Initial Setup
+    func screenInitialSetup() {
+        registerBtn.isEnabled = false
+    }
+    
+    @IBAction func textFieldChanged(_ sender: UITextField) {
+                sender.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
     
     //MARK: - Button tapped action
     @IBAction func registerTapped(_ sender: UIButton) {
@@ -36,12 +47,17 @@ class RegisterViewController: UIViewController {
 
 //MARK: - Register ViewModel Delegate
 extension RegisterViewController: RegisterViewModelDelegate {
-    func validationResult(result: String) {
-        
+    func validationResult(result: Bool) {
+        print("RegisterViewController - ValidationResult: \(result)")
+        registerBtn.isEnabled = result
+    }
+}
+
+//MARK: - TextField Delegate
+extension RegisterViewController: UITextFieldDelegate {
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        registerViewModel.registerRequest = RegisterRequest(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
     }
     
-    func temp() {
-        
-    }
 }
 

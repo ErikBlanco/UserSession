@@ -23,6 +23,9 @@
 		AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */; };
 		AEF35B312B59C7B700FFAF5C /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B302B59C7B700FFAF5C /* HttpUtility.swift */; };
 		AEF35B332B59C8B200FFAF5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B322B59C8B200FFAF5C /* APIError.swift */; };
+		AEF35B362B59CBE900FFAF5C /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B352B59CBE900FFAF5C /* RegisterRequest.swift */; };
+		AEF35B382B59CFF000FFAF5C /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */; };
+		AEF35B3A2B59D08A00FFAF5C /* RegexConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceLayer.swift; sourceTree = "<group>"; };
 		AEF35B302B59C7B700FFAF5C /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		AEF35B322B59C8B200FFAF5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AEF35B352B59CBE900FFAF5C /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
+		AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 			children = (
 				AEF35B1E2B59BA6C00FFAF5C /* SegueConstants.swift */,
 				AEF35B202B59BB6700FFAF5C /* ErrorConstants.swift */,
+				AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */,
 			);
 			path = AppConstants;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 		AEF35B1A2B59B82000FFAF5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEF35B342B59CBDE00FFAF5C /* Register */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +167,15 @@
 				AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */,
 			);
 			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		AEF35B342B59CBDE00FFAF5C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEF35B352B59CBE900FFAF5C /* RegisterRequest.swift */,
+				AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +253,12 @@
 				AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */,
 				AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */,
 				AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */,
+				AEF35B362B59CBE900FFAF5C /* RegisterRequest.swift in Sources */,
 				AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */,
 				AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */,
+				AEF35B3A2B59D08A00FFAF5C /* RegexConstants.swift in Sources */,
 				AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */,
+				AEF35B382B59CFF000FFAF5C /* RegisterValidation.swift in Sources */,
 				AEF35B1F2B59BA6C00FFAF5C /* SegueConstants.swift in Sources */,
 				AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */,
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,

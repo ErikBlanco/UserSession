@@ -8,9 +8,25 @@
 import Foundation
 
 protocol RegisterViewModelDelegate: BaseProtocols {
-    func temp()
+//    func temp()
 }
 
 class RegisterViewModel: ObservableObject {
     weak var registerDelegate: RegisterViewModelDelegate?
+    private let registerService: RegisterService
+    
+    @Published var registerRequest: RegisterRequest? {
+        didSet {
+            validateForm()
+        }
+    }
+    
+    init(_registerService: RegisterService) {
+        self.registerService = _registerService
+    }
+    
+    private func validateForm() {
+        let validationResult = RegisterValidation().Validate(registerRequest: registerRequest!)
+        registerDelegate?.validationResult(result: validationResult)
+    }
 }

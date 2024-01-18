@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol RegistrationService {
+protocol RegisterService {
     func register()
 }
 
-class RegisterServiceImplementation: RegistrationService {
+class RegisterServiceImplementation: RegisterService {
     private let httpUtility: HttpUtility?
     
     init(_httpUtility: HttpUtility) {
