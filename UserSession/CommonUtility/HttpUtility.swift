@@ -13,7 +13,16 @@ enum HTTPMethod: String, CaseIterable {
 }
 
 struct HttpUtility {
-    func postApiData<T:Decodable>(requestUrl: URL, method: HTTPMethod, requestBody: Encodable, resultType: T.Type, completionHandler: @escaping(_ result: T?, _ apiError: APIError?) -> Void) {
-        // TO DO: Request user registration
+    func postApiData<T:Decodable>(requestUrl: String, method: HTTPMethod, requestBody: Encodable, resultType: T.Type, completionHandler: @escaping(_ result: T?, _ apiError: APIError?) -> Void) {
+        // Due to not having an active service, we directly use our database layer
+        switch requestUrl {
+        case "register":
+            print("")
+            break;
+        case "signIn":
+            break;
+        default:
+            print("")
+        }
     }
 }

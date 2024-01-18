@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegisterService {
-    func register()
+    func register(registerRequest: RegisterRequest)
 }
 
 class RegisterServiceImplementation: RegisterService {
@@ -18,7 +18,8 @@ class RegisterServiceImplementation: RegisterService {
         httpUtility = _httpUtility
     }
     
-    func register() {
+    func register(registerRequest: RegisterRequest) {
         // TO DO: Register logic - Use our private httpUtility constant
+        
     }
 }

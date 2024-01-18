@@ -42,6 +42,8 @@ class RegisterViewController: UIViewController {
     
     //MARK: - Button tapped action
     @IBAction func registerTapped(_ sender: UIButton) {
+        
+        
         performSegue(withIdentifier: SegueConstants.signInId, sender: self)
     }
 }

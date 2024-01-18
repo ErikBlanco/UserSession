@@ -29,4 +29,8 @@ class RegisterViewModel: ObservableObject {
         let validationResult = RegisterValidation().Validate(registerRequest: registerRequest!)
         registerDelegate?.validationResult(result: validationResult)
     }
+    
+    func registerUserWebService() {
+        registerService.register(registerRequest: registerRequest!)
+    }
 }
