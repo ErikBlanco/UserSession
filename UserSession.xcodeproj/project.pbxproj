@@ -20,6 +20,9 @@
 		AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */; };
 		AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */; };
 		AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */; };
+		AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */; };
+		AEF35B312B59C7B700FFAF5C /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B302B59C7B700FFAF5C /* HttpUtility.swift */; };
+		AEF35B332B59C8B200FFAF5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B322B59C8B200FFAF5C /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
+		AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceLayer.swift; sourceTree = "<group>"; };
+		AEF35B302B59C7B700FFAF5C /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		AEF35B322B59C8B200FFAF5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				AEF35B1A2B59B82000FFAF5C /* Model */,
 				AEF35B1C2B59B84C00FFAF5C /* View */,
 				AEF35B192B59B81A00FFAF5C /* ViewModel */,
+				AEF35B2D2B59C6F200FFAF5C /* ServiceLayer */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
@@ -140,8 +147,18 @@
 			isa = PBXGroup;
 			children = (
 				AEF35B2B2B59C42D00FFAF5C /* BaseProtocols.swift */,
+				AEF35B302B59C7B700FFAF5C /* HttpUtility.swift */,
+				AEF35B322B59C8B200FFAF5C /* APIError.swift */,
 			);
 			path = CommonUtility;
+			sourceTree = "<group>";
+		};
+		AEF35B2D2B59C6F200FFAF5C /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF35B312B59C7B700FFAF5C /* HttpUtility.swift in Sources */,
 				AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */,
 				AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */,
+				AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */,
 				AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */,
 				AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */,
 				AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */,
@@ -225,6 +244,7 @@
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,
 				AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */,
 				AEF35B072B59B75C00FFAF5C /* SceneDelegate.swift in Sources */,
+				AEF35B332B59C8B200FFAF5C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
