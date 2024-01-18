@@ -8,6 +8,6 @@
 import Foundation
 
 struct SegueConstants {
-    static let registerId = "registerId"
-    static let signInId = "signInId"
+    static let registerId = "registerSegueId"
+    static let signInId = "signInSegueId"
 }
