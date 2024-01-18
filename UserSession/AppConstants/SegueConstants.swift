@@ -10,4 +10,5 @@ import Foundation
 struct SegueConstants {
     static let registerId = "registerSegueId"
     static let signInId = "signInSegueId"
+    static let homeId = "homeSegueId"
 }

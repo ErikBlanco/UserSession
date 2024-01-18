@@ -116,6 +116,7 @@
                         <outlet property="confirmPasswordTextField" destination="k09-pQ-vtH" id="WVg-8Q-9Pk"/>
                         <outlet property="emailTextField" destination="2ga-fm-wGT" id="dQW-7T-exq"/>
                         <outlet property="passwordTextField" destination="OAh-U4-BdA" id="1N0-xF-N85"/>
+                        <segue destination="Ep0-bq-yLZ" kind="show" identifier="signInSegueId" id="U8M-qV-DGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8Z-Vi-yjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,11 +173,43 @@
                     <connections>
                         <outlet property="emailTextField" destination="hOG-nG-AKG" id="27Z-Cs-CUI"/>
                         <outlet property="passwordTextField" destination="pqk-D6-cM0" id="l9l-K2-76b"/>
+                        <segue destination="Jls-6G-0zq" kind="show" identifier="homeSegueId" id="zE6-qn-OuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7Q-he-D4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2840" y="-2"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="WRn-rC-Z2k">
+            <objects>
+                <viewController id="Jls-6G-0zq" customClass="HomeViewController" customModule="UserSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1n-Z0-B76">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPG-lL-jjB">
+                                <rect key="frame" x="30" y="408.66666666666669" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="Jls-6G-0zq" eventType="touchUpInside" id="w1t-4D-Ny9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xiu-lw-y8D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KPG-lL-jjB" firstAttribute="centerY" secondItem="T1n-Z0-B76" secondAttribute="centerY" id="Dhw-ba-Nn5"/>
+                            <constraint firstItem="KPG-lL-jjB" firstAttribute="leading" secondItem="Xiu-lw-y8D" secondAttribute="leading" constant="30" id="bcw-xj-Lyl"/>
+                            <constraint firstItem="Xiu-lw-y8D" firstAttribute="trailing" secondItem="KPG-lL-jjB" secondAttribute="trailing" constant="30" id="rTO-VG-YhA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hM8-jc-8fg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDy-TW-L8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3711" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VoD-R6-BYG">
@@ -197,6 +230,9 @@
             <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U8M-qV-DGj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

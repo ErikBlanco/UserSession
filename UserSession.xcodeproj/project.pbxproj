@@ -17,6 +17,7 @@
 		AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B202B59BB6700FFAF5C /* ErrorConstants.swift */; };
 		AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B222B59BBD000FFAF5C /* RegisterViewController.swift */; };
 		AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B242B59BBF100FFAF5C /* SignInViewController.swift */; };
+		AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AEF35B202B59BB6700FFAF5C /* ErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
 		AEF35B222B59BBD000FFAF5C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEF35B242B59BBF100FFAF5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				AEF35B082B59B75C00FFAF5C /* LandingPageViewController.swift */,
 				AEF35B222B59BBD000FFAF5C /* RegisterViewController.swift */,
 				AEF35B242B59BBF100FFAF5C /* SignInViewController.swift */,
+				AEF35B262B59C13F00FFAF5C /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */,
 				AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */,
 				AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */,
+				AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */,
 				AEF35B1F2B59BA6C00FFAF5C /* SegueConstants.swift in Sources */,
 				AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */,
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,

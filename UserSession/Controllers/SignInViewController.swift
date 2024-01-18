@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func signInTapped(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: SegueConstants.homeId, sender: self)
     }
 }
 

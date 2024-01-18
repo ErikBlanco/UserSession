@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func registerTapped(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: SegueConstants.signInId, sender: self)
     }
 }
 
