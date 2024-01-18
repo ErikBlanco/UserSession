@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var registerBtn: UIButton!
+    
     //MARK: - Properties
     private let registerService: RegisterServiceImplementation = RegisterServiceImplementation(_httpUtility: HttpUtility())
     
@@ -25,7 +26,6 @@ class RegisterViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         screenInitialSetup()
     }
     
@@ -34,6 +34,7 @@ class RegisterViewController: UIViewController {
         registerBtn.isEnabled = false
     }
     
+    //MARK: - Textfields changed
     @IBAction func textFieldChanged(_ sender: UITextField) {
         sender.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }

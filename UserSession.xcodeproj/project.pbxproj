@@ -26,6 +26,10 @@
 		AEF35B362B59CBE900FFAF5C /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B352B59CBE900FFAF5C /* RegisterRequest.swift */; };
 		AEF35B382B59CFF000FFAF5C /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */; };
 		AEF35B3A2B59D08A00FFAF5C /* RegexConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */; };
+		AEF35B3C2B59D56F00FFAF5C /* SignInServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B3B2B59D56F00FFAF5C /* SignInServiceLayer.swift */; };
+		AEF35B3E2B59D5E200FFAF5C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B3D2B59D5E200FFAF5C /* SignInViewModel.swift */; };
+		AEF35B412B59D63500FFAF5C /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B402B59D63500FFAF5C /* SignInRequest.swift */; };
+		AEF35B432B59D64A00FFAF5C /* SignInValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B422B59D64A00FFAF5C /* SignInValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		AEF35B352B59CBE900FFAF5C /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
 		AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexConstants.swift; sourceTree = "<group>"; };
+		AEF35B3B2B59D56F00FFAF5C /* SignInServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInServiceLayer.swift; sourceTree = "<group>"; };
+		AEF35B3D2B59D5E200FFAF5C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		AEF35B402B59D63500FFAF5C /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		AEF35B422B59D64A00FFAF5C /* SignInValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF35B282B59C30C00FFAF5C /* RegisterViewModel.swift */,
+				AEF35B3D2B59D5E200FFAF5C /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 		AEF35B1A2B59B82000FFAF5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEF35B3F2B59D62900FFAF5C /* SignIn */,
 				AEF35B342B59CBDE00FFAF5C /* Register */,
 			);
 			path = Model;
@@ -165,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF35B2E2B59C71600FFAF5C /* RegisterServiceLayer.swift */,
+				AEF35B3B2B59D56F00FFAF5C /* SignInServiceLayer.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -176,6 +187,15 @@
 				AEF35B372B59CFF000FFAF5C /* RegisterValidation.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		AEF35B3F2B59D62900FFAF5C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				AEF35B402B59D63500FFAF5C /* SignInRequest.swift */,
+				AEF35B422B59D64A00FFAF5C /* SignInValidation.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +280,13 @@
 				AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */,
 				AEF35B382B59CFF000FFAF5C /* RegisterValidation.swift in Sources */,
 				AEF35B1F2B59BA6C00FFAF5C /* SegueConstants.swift in Sources */,
+				AEF35B3C2B59D56F00FFAF5C /* SignInServiceLayer.swift in Sources */,
+				AEF35B432B59D64A00FFAF5C /* SignInValidation.swift in Sources */,
 				AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */,
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,
+				AEF35B3E2B59D5E200FFAF5C /* SignInViewModel.swift in Sources */,
 				AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */,
+				AEF35B412B59D63500FFAF5C /* SignInRequest.swift in Sources */,
 				AEF35B072B59B75C00FFAF5C /* SceneDelegate.swift in Sources */,
 				AEF35B332B59C8B200FFAF5C /* APIError.swift in Sources */,
 			);
