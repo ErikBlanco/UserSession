@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var registerBtn: UIButton!
-    
+    @IBOutlet weak var errorLabel: UILabel!
     //MARK: - Properties
     private let registerService: RegisterServiceImplementation = RegisterServiceImplementation(_httpUtility: HttpUtility())
     
@@ -32,6 +32,7 @@ class RegisterViewController: UIViewController {
     //MARK: - Screen Initial Setup
     func screenInitialSetup() {
         registerBtn.isEnabled = false
+        errorLabel.isHidden = true
     }
     
     //MARK: - Textfields changed
@@ -52,9 +53,13 @@ extension RegisterViewController: RegisterViewModelDelegate {
         registerBtn.isEnabled = result
     }
     
-    func apiResponseStatus(isSuccessful: Bool, response: RegistrationResponse?, error: APIError?) {
+    func apiResponseStatus(isSuccessful: Bool, response: RegisterResponse?, error apiError: APIError?) {
         if isSuccessful {
             performSegue(withIdentifier: SegueConstants.signInId, sender: self)
+        } else {
+            print(apiError?.error ?? "Unknown error" )
+            errorLabel.text = apiError?.error
+            errorLabel.isHidden = false
         }
     }
 }

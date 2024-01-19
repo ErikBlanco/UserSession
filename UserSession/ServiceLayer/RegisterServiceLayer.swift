@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegisterService {
-    func register(registerRequest: RegisterRequest, completion: @escaping(Result<RegistrationResponse?, APIError>) -> Void)
+    func register(registerRequest: RegisterRequest, completion: @escaping(Result<RegisterResponse?, APIError>) -> Void)
 }
 
 class RegisterServiceImplementation: RegisterService {
@@ -17,12 +17,12 @@ class RegisterServiceImplementation: RegisterService {
         httpUtility = _httpUtility
     }
     
-    func register(registerRequest: RegisterRequest, completion: @escaping (Result<RegistrationResponse?, APIError>) -> Void) {
-        httpUtility?.registerUser(request: registerRequest) { message, error in
+    func register(registerRequest: RegisterRequest, completion: @escaping (Result<RegisterResponse?, APIError>) -> Void) {
+        httpUtility?.registerUser(request: registerRequest) { result, error in
             if let error {
                 completion(.failure(error))
             } else {
-                completion(.success(RegistrationResponse(response: message)))
+                completion(.success(result))
             }
         }
     }

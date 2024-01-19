@@ -9,7 +9,7 @@ import FirebaseAuth
 import Foundation
 
 protocol RegisterViewModelDelegate: BaseProtocols {
-    func apiResponseStatus(isSuccessful: Bool, response: RegistrationResponse?, error: APIError?)
+    func apiResponseStatus(isSuccessful: Bool, response: RegisterResponse?, error: APIError?)
 }
 
 class RegisterViewModel: ObservableObject {

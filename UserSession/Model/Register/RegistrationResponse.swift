@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct RegistrationResponse {
-    let response: String
+struct RegisterResponse {
+    let message: String
 }

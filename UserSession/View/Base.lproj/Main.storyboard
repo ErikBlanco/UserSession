@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T3j-w2-EuV">
-                                <rect key="frame" x="30" y="327.66666666666669" width="333" height="196.66666666666669"/>
+                                <rect key="frame" x="30" y="312.66666666666669" width="333" height="227.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeE-Xm-XXB">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="20.333333333333332"/>
@@ -101,8 +101,14 @@
                                             <action selector="textFieldChanged:" destination="3g1-CD-cEv" eventType="editingChanged" id="WUy-go-T4z"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmR-kB-lfj">
+                                        <rect key="frame" x="0.0" y="162.33333333333331" width="333" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.94509803920000002" green="0.1218318577" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxh-mo-C1k">
-                                        <rect key="frame" x="0.0" y="162.33333333333331" width="333" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="192.66666666666663" width="333" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Register"/>
                                         <connections>
@@ -124,6 +130,7 @@
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="k09-pQ-vtH" id="WVg-8Q-9Pk"/>
                         <outlet property="emailTextField" destination="2ga-fm-wGT" id="dQW-7T-exq"/>
+                        <outlet property="errorLabel" destination="BmR-kB-lfj" id="q1R-wY-Okp"/>
                         <outlet property="passwordTextField" destination="OAh-U4-BdA" id="1N0-xF-N85"/>
                         <outlet property="registerBtn" destination="nxh-mo-C1k" id="BEE-ob-sOn"/>
                         <segue destination="Ep0-bq-yLZ" kind="show" identifier="signInSegueId" id="U8M-qV-DGj"/>
