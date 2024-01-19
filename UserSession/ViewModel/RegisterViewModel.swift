@@ -5,10 +5,11 @@
 //  Created by Erik Blanco on 1/18/24.
 //
 
+import FirebaseAuth
 import Foundation
 
 protocol RegisterViewModelDelegate: BaseProtocols {
-
+    func apiResponseStatus(isSuccessful: Bool, response: RegistrationResponse?, error: APIError?)
 }
 
 class RegisterViewModel: ObservableObject {
@@ -31,6 +32,13 @@ class RegisterViewModel: ObservableObject {
     }
     
     func registerUserWebService() {
-        registerService.register(registerRequest: registerRequest!)
+        registerService.register(registerRequest: registerRequest!) { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.registerDelegate?.apiResponseStatus(isSuccessful: true, response: response, error: nil)
+            case .failure(let error):
+                self?.registerDelegate?.apiResponseStatus(isSuccessful: false, response: nil, error: error)
+            }
+        }
     }
 }

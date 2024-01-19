@@ -42,9 +42,7 @@ class RegisterViewController: UIViewController {
     
     //MARK: - Button tapped action
     @IBAction func registerTapped(_ sender: UIButton) {
-        
-        
-        performSegue(withIdentifier: SegueConstants.signInId, sender: self)
+        registerViewModel.registerUserWebService()
     }
 }
 
@@ -52,6 +50,12 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController: RegisterViewModelDelegate {
     func validationResult(result: Bool) {
         registerBtn.isEnabled = result
+    }
+    
+    func apiResponseStatus(isSuccessful: Bool, response: RegistrationResponse?, error: APIError?) {
+        if isSuccessful {
+            performSegue(withIdentifier: SegueConstants.signInId, sender: self)
+        }
     }
 }
 
@@ -61,4 +65,3 @@ extension RegisterViewController: UITextFieldDelegate {
         registerViewModel.registerRequest = RegisterRequest(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
     }
 }
-
