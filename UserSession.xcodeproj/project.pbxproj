@@ -61,6 +61,7 @@
 		AEF35B812B59EBC100FFAF5C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AEF35B802B59EBC100FFAF5C /* FirebaseStorage */; };
 		AEF35B832B59EBC100FFAF5C /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = AEF35B822B59EBC100FFAF5C /* FirebaseStorageCombine-Community */; };
 		AEF35B852B59EFDC00FFAF5C /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B842B59EFDC00FFAF5C /* RegistrationResponse.swift */; };
+		AEF35B872B59FBFE00FFAF5C /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B862B59FBFE00FFAF5C /* SignInResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		AEF35B472B59DB2900FFAF5C /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		AEF35B4B2B59EB4C00FFAF5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEF35B842B59EFDC00FFAF5C /* RegistrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
+		AEF35B862B59FBFE00FFAF5C /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				AEF35B402B59D63500FFAF5C /* SignInRequest.swift */,
 				AEF35B422B59D64A00FFAF5C /* SignInValidation.swift */,
+				AEF35B862B59FBFE00FFAF5C /* SignInResponse.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */,
 				AEF35B362B59CBE900FFAF5C /* RegisterRequest.swift in Sources */,
 				AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */,
+				AEF35B872B59FBFE00FFAF5C /* SignInResponse.swift in Sources */,
 				AEF35B272B59C13F00FFAF5C /* HomeViewController.swift in Sources */,
 				AEF35B3A2B59D08A00FFAF5C /* RegexConstants.swift in Sources */,
 				AEF35B2C2B59C42D00FFAF5C /* BaseProtocols.swift in Sources */,

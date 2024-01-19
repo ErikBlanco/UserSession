@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SignInService {
-    func signIn()
+    func signIn(signInRequest: SignInRequest, completion: @escaping(Result<SignInResponse?, APIError>) -> Void)
 }
 
 class SignInServiceImplementation: SignInService {
@@ -18,7 +18,13 @@ class SignInServiceImplementation: SignInService {
         httpUtility = _httpUtility
     }
     
-    func signIn() {
-        // TO DO: Sign in logic - Use our private httpUtility constant
+    func signIn(signInRequest: SignInRequest, completion: @escaping (Result<SignInResponse?, APIError>) -> Void) {
+        httpUtility?.signInUser(request: signInRequest) { result, error in
+            if let error {
+                completion(.failure(error))
+            } else {
+                completion(.success(result))
+            }
+        }
     }
 }

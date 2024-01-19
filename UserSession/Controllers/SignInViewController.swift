@@ -12,6 +12,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     //MARK: - Properties
     private let signInService: SignInServiceImplementation = SignInServiceImplementation(_httpUtility: HttpUtility())
@@ -31,6 +32,7 @@ class SignInViewController: UIViewController {
     //MARK: - Screen initial setup
     func screenInitialSetup() {
         signInBtn.isEnabled = false
+        errorLabel.isHidden = true
     }
     
     //MARK: - Textfields changed
@@ -40,7 +42,7 @@ class SignInViewController: UIViewController {
     
     //MARK: - Sign In button tapped
     @IBAction func signInTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: SegueConstants.homeId, sender: self)
+        signInViewModel.signInUserWebService()
     }
 }
 
@@ -48,6 +50,16 @@ class SignInViewController: UIViewController {
 extension SignInViewController: SignInViewModelDelegate {
     func validationResult(result: Bool) {
         signInBtn.isEnabled = result
+    }
+    
+    func apiResponseStatus(isSuccessful: Bool, response: SignInResponse?, error apiError: APIError?) {
+        if isSuccessful {
+            performSegue(withIdentifier: SegueConstants.homeId, sender: self)
+        } else {
+            print(apiError?.error ?? "Unknown error" )
+            errorLabel.text = apiError?.error
+            errorLabel.isHidden = false
+        }
     }
 }
 

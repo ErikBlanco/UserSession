@@ -13,10 +13,6 @@ enum HTTPMethod: String, CaseIterable {
     case GET = "GET"
 }
 
-protocol FirebaseResponse {
-    
-}
-
 struct HttpUtility {
     func registerUser(request: RegisterRequest, completionHandler: @escaping (_ result: RegisterResponse?, _ apiError: APIError?)-> Void) {
         Auth.auth().createUser(withEmail: request.email!, password: request.password!) { authResult, error in
@@ -25,6 +21,18 @@ struct HttpUtility {
             } else {
                 if let authResult {
                     _ = completionHandler(RegisterResponse(message: "Successully created user"), nil)
+                }
+            }
+        }
+    }
+    
+    func signInUser(request: SignInRequest, completionHandler: @escaping (_ result: SignInResponse?, _ apiError: APIError?)-> Void) {
+        Auth.auth().signIn(withEmail: request.email!, password: request.password!) { authResult, error in
+            if let error {
+                _ = completionHandler(nil, APIError(error: error.localizedDescription))
+            } else {
+                if let authResult {
+                    _ = completionHandler(SignInResponse(message: "Successully created user"), nil)
                 }
             }
         }

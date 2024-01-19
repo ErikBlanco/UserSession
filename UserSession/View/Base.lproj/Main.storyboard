@@ -104,7 +104,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmR-kB-lfj">
                                         <rect key="frame" x="0.0" y="162.33333333333331" width="333" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.94509803920000002" green="0.1218318577" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxh-mo-C1k">
@@ -149,7 +149,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKU-3G-p0z">
-                                <rect key="frame" x="30" y="349.66666666666669" width="333" height="152.66666666666669"/>
+                                <rect key="frame" x="30" y="334.66666666666669" width="333" height="183.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4c-zf-Vpt">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="20.333333333333332"/>
@@ -173,8 +173,14 @@
                                             <action selector="textFieldChanged:" destination="Ep0-bq-yLZ" eventType="editingChanged" id="8gQ-Ht-oad"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLk-0j-AkB">
+                                        <rect key="frame" x="0.0" y="118.3333333333333" width="333" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhL-A9-Dem">
-                                        <rect key="frame" x="0.0" y="118.3333333333333" width="333" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="148.66666666666663" width="333" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
                                         <connections>
@@ -195,6 +201,7 @@
                     <navigationItem key="navigationItem" id="Kcd-6L-BKm"/>
                     <connections>
                         <outlet property="emailTextField" destination="hOG-nG-AKG" id="27Z-Cs-CUI"/>
+                        <outlet property="errorLabel" destination="TLk-0j-AkB" id="cr7-lV-4y4"/>
                         <outlet property="passwordTextField" destination="pqk-D6-cM0" id="l9l-K2-76b"/>
                         <outlet property="signInBtn" destination="JhL-A9-Dem" id="8CI-VV-hwp"/>
                         <segue destination="Jls-6G-0zq" kind="show" identifier="homeSegueId" id="zE6-qn-OuN"/>
@@ -260,6 +267,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
