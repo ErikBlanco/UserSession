@@ -5,6 +5,8 @@
 //  Created by Erik Blanco on 1/18/24.
 //
 
+// This approach was an attempt to use SwiftData with UIKit. Discarded as Firebase was used for account creation.
+
 import Foundation
 import SwiftData
 

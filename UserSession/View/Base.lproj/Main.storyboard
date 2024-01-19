@@ -54,6 +54,7 @@
                     <connections>
                         <segue destination="3g1-CD-cEv" kind="show" identifier="registerSegueId" id="MGt-1x-zP3"/>
                         <segue destination="Ep0-bq-yLZ" kind="show" identifier="signInSegueId" id="zdc-83-qgh"/>
+                        <segue destination="Jls-6G-0zq" kind="show" identifier="homeSegueId" id="jzW-uq-SfK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -262,7 +263,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U8M-qV-DGj"/>
+        <segue reference="jzW-uq-SfK"/>
+        <segue reference="zdc-83-qgh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

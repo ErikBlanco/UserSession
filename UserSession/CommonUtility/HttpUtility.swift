@@ -19,9 +19,7 @@ struct HttpUtility {
             if let error {
                 _ = completionHandler(nil, APIError(error: error.localizedDescription))
             } else {
-                if let authResult {
-                    _ = completionHandler(RegisterResponse(message: "Successully created user"), nil)
-                }
+                _ = completionHandler(RegisterResponse(message: "Successully created user"), nil)
             }
         }
     }
@@ -31,9 +29,7 @@ struct HttpUtility {
             if let error {
                 _ = completionHandler(nil, APIError(error: error.localizedDescription))
             } else {
-                if let authResult {
-                    _ = completionHandler(SignInResponse(message: "Successully created user"), nil)
-                }
+                _ = completionHandler(SignInResponse(message: "Successully created user"), nil)
             }
         }
     }
