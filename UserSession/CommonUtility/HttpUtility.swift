@@ -5,13 +5,10 @@
 //  Created by Erik Blanco on 1/18/24.
 //
 
+// HttpUtility - Due to the lack of a service for this exercise, we'll be making use of FirebaseAuth directly.
+
 import FirebaseAuth
 import Foundation
-
-enum HTTPMethod: String, CaseIterable {
-    case POST = "POST"
-    case GET = "GET"
-}
 
 struct HttpUtility {
     func registerUser(request: RegisterRequest, completionHandler: @escaping (_ result: RegisterResponse?, _ apiError: APIError?)-> Void) {

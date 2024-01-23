@@ -5,6 +5,8 @@
 //  Created by Erik Blanco on 1/18/24.
 //
 
+// Part of SwiftData approach attempt. Discarded.
+
 import SwiftData
 import Foundation
 

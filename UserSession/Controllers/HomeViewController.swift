@@ -19,10 +19,10 @@ class HomeViewController: UIViewController {
     @IBAction func signOutTapped(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
+            self.navigationController?.popToRootViewController(animated: true)
         } catch {
             print("Error signing out \(error.localizedDescription)")
         }
-        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 

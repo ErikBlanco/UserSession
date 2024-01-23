@@ -11,7 +11,7 @@ import UIKit
 class LandingPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         guard let _ = Auth.auth().currentUser?.uid else { return }
         performSegue(withIdentifier: SegueConstants.homeId, sender: self)
     }
