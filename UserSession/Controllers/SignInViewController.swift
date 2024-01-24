@@ -56,8 +56,8 @@ extension SignInViewController: SignInViewModelDelegate {
         if isSuccessful {
             performSegue(withIdentifier: SegueConstants.homeId, sender: self)
         } else {
-            print(apiError?.error ?? "Unknown error" )
-            errorLabel.text = apiError?.error
+            print(apiError?.message ?? "Unknown error" )
+            errorLabel.text = apiError?.message
             errorLabel.isHidden = false
         }
     }

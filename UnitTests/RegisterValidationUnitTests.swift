@@ -8,7 +8,7 @@
 import XCTest
 @testable import UserSession
 
-class RegisterValidationUnitTests: XCTestCase {
+final class RegisterValidationUnitTests: XCTestCase {
     func test_RegisterValidation_With_EmptyEmail_Returns_ValidationFailure() {
         let validation = RegisterValidation()
         let request = RegisterRequest(email: "", password: "123123", confirmPassword: "123123")

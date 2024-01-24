@@ -18,5 +18,5 @@ import Foundation
 //}
 
 struct APIError: Error {
-    var error: String
+    var message: String
 }

@@ -31,6 +31,7 @@ class RegisterViewModel: ObservableObject {
         registerDelegate?.validationResult(result: validationResult)
     }
     
+    // Replaced by registerUserWebServiceHandler
     func registerUserWebService() {
         registerService.register(registerRequest: registerRequest!) { [weak self] result in
             switch result {
@@ -38,6 +39,17 @@ class RegisterViewModel: ObservableObject {
                 self?.registerDelegate?.apiResponseStatus(isSuccessful: true, response: response, error: nil)
             case .failure(let error):
                 self?.registerDelegate?.apiResponseStatus(isSuccessful: false, response: nil, error: error)
+            }
+        }
+    }
+    
+    func registerUserWebServiceHandler(completion: @escaping (Result<RegisterResponse?, APIError>) -> Void) {
+        registerService.register(registerRequest: registerRequest!) { [weak self] result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }

@@ -43,7 +43,18 @@ class RegisterViewController: UIViewController {
     
     //MARK: - Button tapped action
     @IBAction func registerTapped(_ sender: UIButton) {
-        registerViewModel.registerUserWebService()
+        registerViewModel.registerUserWebServiceHandler { result in
+            switch result {
+            case .success(let success):
+                if let _ = success {
+                    self.performSegue(withIdentifier: SegueConstants.signInId, sender: self)
+                }
+            case .failure(let error):
+                print(error.message)
+                self.errorLabel.text = error.message
+                self.errorLabel.isHidden = false
+            }
+        }
     }
 }
 
@@ -57,8 +68,8 @@ extension RegisterViewController: RegisterViewModelDelegate {
         if isSuccessful {
             performSegue(withIdentifier: SegueConstants.signInId, sender: self)
         } else {
-            print(apiError?.error ?? "Unknown error" )
-            errorLabel.text = apiError?.error
+            print(apiError?.message ?? "Unknown error" )
+            errorLabel.text = apiError?.message
             errorLabel.isHidden = false
         }
     }

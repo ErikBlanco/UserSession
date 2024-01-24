@@ -10,6 +10,9 @@
 		AE33BA0A2B609F03008C890A /* RegisterValidationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */; };
 		AE33BA112B60C7EE008C890A /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33BA102B60C7EE008C890A /* ValidationResult.swift */; };
 		AE9D74C52B60CE2A001C5C94 /* SignInValidationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */; };
+		AE9D74C82B60D37C001C5C94 /* RegisterMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D74C72B60D37C001C5C94 /* RegisterMockService.swift */; };
+		AE9D74CA2B60D3A0001C5C94 /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D74C92B60D3A0001C5C94 /* RegisterViewModelTests.swift */; };
+		AE9D74CC2B60D9FD001C5C94 /* SuccessConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D74CB2B60D9FD001C5C94 /* SuccessConstants.swift */; };
 		AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B042B59B75C00FFAF5C /* AppDelegate.swift */; };
 		AEF35B072B59B75C00FFAF5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B062B59B75C00FFAF5C /* SceneDelegate.swift */; };
 		AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B082B59B75C00FFAF5C /* LandingPageViewController.swift */; };
@@ -82,6 +85,9 @@
 		AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidationUnitTests.swift; sourceTree = "<group>"; };
 		AE33BA102B60C7EE008C890A /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInValidationUnitTests.swift; sourceTree = "<group>"; };
+		AE9D74C72B60D37C001C5C94 /* RegisterMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMockService.swift; sourceTree = "<group>"; };
+		AE9D74C92B60D3A0001C5C94 /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
+		AE9D74CB2B60D9FD001C5C94 /* SuccessConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessConstants.swift; sourceTree = "<group>"; };
 		AEF35B012B59B75C00FFAF5C /* UserSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF35B042B59B75C00FFAF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF35B062B59B75C00FFAF5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,8 +170,17 @@
 			children = (
 				AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */,
 				AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */,
+				AE9D74C92B60D3A0001C5C94 /* RegisterViewModelTests.swift */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		AE9D74C62B60D365001C5C94 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D74C72B60D37C001C5C94 /* RegisterMockService.swift */,
+			);
+			path = MockService;
 			sourceTree = "<group>";
 		};
 		AEF35AF82B59B75C00FFAF5C = {
@@ -197,6 +212,7 @@
 				AEF35B2A2B59C41500FFAF5C /* CommonUtility */,
 				AEF35B1B2B59B82500FFAF5C /* Controllers */,
 				AEF35B462B59DB0900FFAF5C /* DataLayer */,
+				AE9D74C62B60D365001C5C94 /* MockService */,
 				AEF35B1A2B59B82000FFAF5C /* Model */,
 				AEF35B1C2B59B84C00FFAF5C /* View */,
 				AEF35B192B59B81A00FFAF5C /* ViewModel */,
@@ -211,6 +227,7 @@
 				AEF35B1E2B59BA6C00FFAF5C /* SegueConstants.swift */,
 				AEF35B202B59BB6700FFAF5C /* ErrorConstants.swift */,
 				AEF35B392B59D08A00FFAF5C /* RegexConstants.swift */,
+				AE9D74CB2B60D9FD001C5C94 /* SuccessConstants.swift */,
 			);
 			path = AppConstants;
 			sourceTree = "<group>";
@@ -445,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9D74CA2B60D3A0001C5C94 /* RegisterViewModelTests.swift in Sources */,
 				AE9D74C52B60CE2A001C5C94 /* SignInValidationUnitTests.swift in Sources */,
 				AE33BA0A2B609F03008C890A /* RegisterValidationUnitTests.swift in Sources */,
 			);
@@ -456,6 +474,7 @@
 			files = (
 				AEF35B312B59C7B700FFAF5C /* HttpUtility.swift in Sources */,
 				AEF35B252B59BBF100FFAF5C /* SignInViewController.swift in Sources */,
+				AE9D74C82B60D37C001C5C94 /* RegisterMockService.swift in Sources */,
 				AEF35B212B59BB6700FFAF5C /* ErrorConstants.swift in Sources */,
 				AEF35B2F2B59C71600FFAF5C /* RegisterServiceLayer.swift in Sources */,
 				AEF35B362B59CBE900FFAF5C /* RegisterRequest.swift in Sources */,
@@ -473,6 +492,7 @@
 				AEF35B232B59BBD000FFAF5C /* RegisterViewController.swift in Sources */,
 				AEF35B852B59EFDC00FFAF5C /* RegistrationResponse.swift in Sources */,
 				AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */,
+				AE9D74CC2B60D9FD001C5C94 /* SuccessConstants.swift in Sources */,
 				AEF35B3E2B59D5E200FFAF5C /* SignInViewModel.swift in Sources */,
 				AEF35B292B59C30C00FFAF5C /* RegisterViewModel.swift in Sources */,
 				AEF35B412B59D63500FFAF5C /* SignInRequest.swift in Sources */,

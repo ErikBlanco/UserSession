@@ -14,9 +14,9 @@ struct HttpUtility {
     func registerUser(request: RegisterRequest, completionHandler: @escaping (_ result: RegisterResponse?, _ apiError: APIError?)-> Void) {
         Auth.auth().createUser(withEmail: request.email!, password: request.password!) { authResult, error in
             if let error {
-                _ = completionHandler(nil, APIError(error: error.localizedDescription))
+                _ = completionHandler(nil, APIError(message: error.localizedDescription))
             } else {
-                _ = completionHandler(RegisterResponse(message: "Successully created user"), nil)
+                _ = completionHandler(RegisterResponse(message: SuccessConstants.successfully_created_user), nil)
             }
         }
     }
@@ -24,9 +24,9 @@ struct HttpUtility {
     func signInUser(request: SignInRequest, completionHandler: @escaping (_ result: SignInResponse?, _ apiError: APIError?)-> Void) {
         Auth.auth().signIn(withEmail: request.email!, password: request.password!) { authResult, error in
             if let error {
-                _ = completionHandler(nil, APIError(error: error.localizedDescription))
+                _ = completionHandler(nil, APIError(message: error.localizedDescription))
             } else {
-                _ = completionHandler(SignInResponse(message: "Successully created user"), nil)
+                _ = completionHandler(SignInResponse(message: SuccessConstants.successfully_created_user), nil)
             }
         }
     }
