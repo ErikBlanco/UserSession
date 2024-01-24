@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE33BA0A2B609F03008C890A /* RegisterValidationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */; };
 		AE33BA112B60C7EE008C890A /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33BA102B60C7EE008C890A /* ValidationResult.swift */; };
+		AE9D74C52B60CE2A001C5C94 /* SignInValidationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */; };
 		AEF35B052B59B75C00FFAF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B042B59B75C00FFAF5C /* AppDelegate.swift */; };
 		AEF35B072B59B75C00FFAF5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B062B59B75C00FFAF5C /* SceneDelegate.swift */; };
 		AEF35B092B59B75C00FFAF5C /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF35B082B59B75C00FFAF5C /* LandingPageViewController.swift */; };
@@ -80,6 +81,7 @@
 		AE33BA072B609F03008C890A /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidationUnitTests.swift; sourceTree = "<group>"; };
 		AE33BA102B60C7EE008C890A /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInValidationUnitTests.swift; sourceTree = "<group>"; };
 		AEF35B012B59B75C00FFAF5C /* UserSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF35B042B59B75C00FFAF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF35B062B59B75C00FFAF5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AE33BA092B609F03008C890A /* RegisterValidationUnitTests.swift */,
+				AE9D74C42B60CE2A001C5C94 /* SignInValidationUnitTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9D74C52B60CE2A001C5C94 /* SignInValidationUnitTests.swift in Sources */,
 				AE33BA0A2B609F03008C890A /* RegisterValidationUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
