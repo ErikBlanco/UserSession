@@ -49,8 +49,8 @@ class RegisterViewController: UIViewController {
 
 //MARK: - Register ViewModel Delegate
 extension RegisterViewController: RegisterViewModelDelegate {
-    func validationResult(result: Bool) {
-        registerBtn.isEnabled = result
+    func validationResult(result: ValidationResult) {
+        registerBtn.isEnabled = result.success
     }
     
     func apiResponseStatus(isSuccessful: Bool, response: RegisterResponse?, error apiError: APIError?) {

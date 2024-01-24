@@ -8,5 +8,5 @@
 import Foundation
 
 protocol BaseProtocols: AnyObject {
-    func validationResult(result: Bool)
+    func validationResult(result: ValidationResult)
 }

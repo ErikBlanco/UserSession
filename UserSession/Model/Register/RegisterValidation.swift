@@ -8,13 +8,14 @@
 import Foundation
 
 struct RegisterValidation {
-    func Validate(registerRequest: RegisterRequest) -> Bool {
-        guard let email = registerRequest.email, !email.isEmpty, isValidEmail(email: email) else { return false }
-        guard let password = registerRequest.password, !password.isEmpty else { return false }
-        guard let confirmPassword = registerRequest.confirmPassword, !confirmPassword.isEmpty else { return false }
-        guard password == confirmPassword else { return false }
+    func Validate(registerRequest: RegisterRequest) -> ValidationResult {
+        guard let email = registerRequest.email, !email.isEmpty else { return ValidationResult(success: false, error: ErrorConstants.email_cannot_be_empty) }
+        guard isValidEmail(email: email) else { return ValidationResult(success:false, error: ErrorConstants.invalid_email)}
+        guard let password = registerRequest.password, !password.isEmpty else { return ValidationResult(success: false, error: ErrorConstants.password_cannot_be_empty) }
+        guard let confirmPassword = registerRequest.confirmPassword, !confirmPassword.isEmpty else { return ValidationResult(success: false, error: ErrorConstants.confirmation_password_cannot_be_empty) }
+        guard password == confirmPassword else { return ValidationResult(success: false, error: ErrorConstants.passwords_do_not_match) }
         
-        return true
+        return ValidationResult(success: true)
     }
     
     private func isValidEmail(email: String) -> Bool {

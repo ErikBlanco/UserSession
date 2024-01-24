@@ -48,8 +48,8 @@ class SignInViewController: UIViewController {
 
 //MARK: - Sign In view model delegate
 extension SignInViewController: SignInViewModelDelegate {
-    func validationResult(result: Bool) {
-        signInBtn.isEnabled = result
+    func validationResult(result: ValidationResult) {
+        signInBtn.isEnabled = result.success
     }
     
     func apiResponseStatus(isSuccessful: Bool, response: SignInResponse?, error apiError: APIError?) {
