@@ -42,7 +42,18 @@ class SignInViewController: UIViewController {
     
     //MARK: - Sign In button tapped
     @IBAction func signInTapped(_ sender: UIButton) {
-        signInViewModel.signInUserWebService()
+        signInViewModel.signInUserWebServiceHandler { result in
+            switch result {
+            case .success(let success):
+                if let _ = success {
+                    self.performSegue(withIdentifier: SegueConstants.homeId, sender: self)
+                }
+            case .failure(let error):
+                print(error.message)
+                self.errorLabel.text = error.message
+                self.errorLabel.isHidden = false
+            }
+        }
     }
 }
 
@@ -52,6 +63,7 @@ extension SignInViewController: SignInViewModelDelegate {
         signInBtn.isEnabled = result.success
     }
     
+    // No longer used
     func apiResponseStatus(isSuccessful: Bool, response: SignInResponse?, error apiError: APIError?) {
         if isSuccessful {
             performSegue(withIdentifier: SegueConstants.homeId, sender: self)

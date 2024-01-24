@@ -15,4 +15,5 @@ struct ErrorConstants {
     static let confirmation_password_cannot_be_empty = "Confirmation password cannot be empty"
     static let passwords_do_not_match = "Passwords do not match"
     static let error_registering_user = "Error creating user"
+    static let error_signing_in = "Error signing in"
 }

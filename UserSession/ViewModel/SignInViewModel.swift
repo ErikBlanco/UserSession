@@ -30,6 +30,7 @@ class SignInViewModel: ObservableObject {
         signInDelegate?.validationResult(result: validationResult)
     }
     
+    //Replaced by signInUserWebServiceHandler
     func signInUserWebService() {
         signInService.signIn(signInRequest: signInRequest!) { [weak self] result in
             switch result {
@@ -37,6 +38,17 @@ class SignInViewModel: ObservableObject {
                 self?.signInDelegate?.apiResponseStatus(isSuccessful: true, response: response, error: nil)
             case .failure(let error):
                 self?.signInDelegate?.apiResponseStatus(isSuccessful: false, response: nil, error: error)
+            }
+        }
+    }
+    
+    func signInUserWebServiceHandler(completion: @escaping (Result<SignInResponse?, APIError>) -> Void) {
+        signInService.signIn(signInRequest: signInRequest!) { [weak self] result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
